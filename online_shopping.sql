@@ -1,0 +1,10 @@
+SELECT 
+customers.customer_name,
+products.product_name,
+orders.quantity,
+orders.order_date
+FROM orders
+JOIN customers 
+ON orders.customer_id = customers.customer_id
+JOIN products
+ON orders.product_id = products.product_id;
